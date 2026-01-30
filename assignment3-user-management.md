@@ -32,7 +32,7 @@ Verification:
 ```bash
 groups tupu
 ```
-
+![Tupu](img/Tupu1.png)
 ---
 
 ## Step 2: Create the **Lupu** user using `useradd`
@@ -56,7 +56,7 @@ Verification:
 ```bash
 id lupu
 ```
-
+![Lupu](img/Lupu2.png)
 ---
 
 ## Step 3: Create the **Hupu** system user with login disabled
@@ -125,6 +125,7 @@ sudo chmod 2770 /opt/projekti
 ```bash
 ls -ld /opt/projekti
 ```
+![Projekti](img/Projekti3.png)
 
 The permissions confirm:
 - Only `tupu` and `lupu` can access the directory

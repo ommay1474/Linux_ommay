@@ -416,6 +416,9 @@ grep vmx /proc/cpuinfo
 sudo apt install cpu-checker
 kvm-ok
 ```
+![](img/cat%20cpuinfo.png)
+![](img/color%20vmx.png)
+![](img/kvm%20ok.png)
 Explanation: Checks CPU virtualization support.
 
 ---

@@ -42,7 +42,7 @@ Virtual machines provide full system isolation but require more resources, while
 sudo snap install multipass
 multipass version
 ```
-![](img/Archive/multipass%20inst%20v.png)
+![](img/multipass%20inst%20v.png)
 Explanation: Installs Multipass and verifies installation.
 
 ---
@@ -53,9 +53,9 @@ multipass launch
 multipass list
 multipass info relieving-kagu
 ```
-![](img/Archive/launch.png)
-![](img/Archive/Multipass%20list.png)
-![](img/Archive/info%20name%20r.png)
+![](img/launch.png)
+![](img/Multipass%20list.png)
+![](img/info%20name%20r.png)
 
 Explanation: Creates and checks VM status.
 
@@ -65,7 +65,7 @@ Explanation: Creates and checks VM status.
 ```bash
 multipass shell relieving-kagu
 ```
-![](img/Archive/shell.png)
+![](img/shell.png)
 Explanation: Opens VM terminal.
 
 ---
@@ -75,7 +75,7 @@ Explanation: Opens VM terminal.
 multipass exec relieving-kagu -- bash -c "echo 'Hello' > hello.txt"
 multipass exec relieving-kagu -- cat hello.txt
 ```
-![](img/Archive/multi%20cat%20he%20w.png)
+![](img/multi%20cat%20he%20w.png)
 Explanation: Creates and reads file inside VM.
 
 ---
@@ -86,7 +86,7 @@ multipass stop relieving-kagu
 multipass delete relieving-kagu
 multipass purge
 ```
-![](img/Archive/multipass%20stop%20d%20p.png)
+![](img/multipass%20stop%20d%20p.png)
 Explanation: Stops and removes VM.
 
 ---
@@ -119,7 +119,7 @@ runcmd:
  - echo "Cloud-init is working!" > /home/ommayb/welcome.txt
  - apt update && apt upgrade -y
 ```
-![](img/Archive/nano%20ommayb.png)
+![](img/nano%20ommayb.png)
 ### Explanation
 Cloud-init automates VM setup such as installing packages and creating users.
 ---
@@ -132,7 +132,7 @@ Started a VM using the configuration file.
 ```
 multipass launch --name ommayb --cloud-init cloud-init.yml
 ```
-![](img/Archive/ommayb%20cloud%20init.png)
+![](img/ommayb%20cloud%20init.png)
 ### Explanation
 This creates a VM with automatic configuration applied during startup.
 
@@ -144,7 +144,7 @@ Entered the new VM.
 ```
 multipass shell ommayb
 ```
-![](img/Archive/shell%20ommayb.png)
+![](img/shell%20ommayb.png)
 
 ---
 
@@ -161,7 +161,7 @@ sudo cat /home/ommayb/welcome.txt
 ```
 Cloud-init is working!
 ```
-![](img/Archive/ommayb%20welcome%20txt.png)
+![](img/ommayb%20welcome%20txt.png)
 ### Explanation
 Confirms that cloud-init executed successfully.
 
@@ -201,7 +201,7 @@ cat /home/ubuntu/shared_folder/hostfile.txt
 ```
 Hello from the host!
 ```
-![](img/Archive/hostfile.png)
+![](img/hostfile.png)
 ### Explanation
 Confirms successful file sharing between host and VM.
 

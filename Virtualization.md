@@ -423,6 +423,38 @@ Explanation: Checks CPU virtualization support.
 
 ---
 
+## Challenges Faced
+
+- **Docker Group Already Exists:**  
+  While running `sudo groupadd docker`, the system returned "group 'docker' already exists".  
+  This was not an error, but required understanding that the group was already created.
+
+- **Permission Setup for Docker:**  
+  Needed to add the user to the Docker group using:
+  ```
+  sudo usermod -aG docker $USER
+  ```
+  Without this, Docker commands required sudo.
+
+- **LXD Initialization Confusion:**  
+  During `lxd init`, multiple configuration questions appeared (storage, network, bridge).  
+  It was initially confusing which options to select.
+
+- **Understanding LXD Networking:**  
+  Creating and understanding the bridge network (`lxdbr0`) required attention to default values.
+
+- **Container Access:**  
+  Needed to learn how to enter a container using:
+  ```
+  lxc exec demo-container -- bash
+  ```
+
+- **Snap Installation Understanding:**  
+  Understanding why Snap is required before installing LXD was initially unclear.
+
+### Explanation
+These challenges helped improve understanding of system configuration, container management, and permission handling in Linux virtualization environments.
+
 # Conclusion
 
 This assignment demonstrated virtualization using Multipass, LXD, Docker, and Snap.
